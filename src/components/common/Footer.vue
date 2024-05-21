@@ -1,5 +1,11 @@
 <template>
   <footer id="footer">
+    <Divider
+      style="margin: 0 auto 0 auto"
+      color="#ffff"
+      thickness="0.1px"
+      length="70%"
+    />
     <div class="top-section">
       <Logo
         link="https://github.com/batugkocak"
@@ -29,6 +35,7 @@
 <script setup>
 import { ref } from "vue";
 import Logo from "./Logo.vue";
+import Divider from "./Divider.vue";
 
 const currentYear = ref(new Date().getFullYear());
 </script>
@@ -48,6 +55,7 @@ const currentYear = ref(new Date().getFullYear());
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin: 0.5rem;
 }
 
 a {
