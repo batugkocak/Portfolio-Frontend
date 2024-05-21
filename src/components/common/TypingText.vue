@@ -1,9 +1,11 @@
 <template>
-  <h1 :style="{ minHeight: minHeight + 'px' }">{{ displayedText }}</h1>
+  <p class="custom-h1" :style="{ minHeight: minHeight + 'px' }">
+    {{ displayedText }}
+  </p>
 </template>
 
 <script setup>
-import { ref, watch, nextTick, onBeforeUnmount } from "vue";
+import { ref, watch, onBeforeUnmount } from "vue";
 
 const props = defineProps({
   text: {
@@ -14,45 +16,44 @@ const props = defineProps({
     type: Number,
     default: 50,
   },
+  writingTime: {
+    type: Number,
+    default: 1000, // 1000ms = 1 second, matching original behavior
+  },
 });
 
 const displayedText = ref("");
-const typingTimeout = ref(null);
+let typingInterval; // Use a variable to track the interval
 
-const clearTypingTimeout = () => {
-  if (typingTimeout.value) {
-    clearTimeout(typingTimeout.value);
-    typingTimeout.value = null;
+const stopTyping = () => {
+  if (typingInterval) {
+    clearInterval(typingInterval);
+    typingInterval = null;
   }
 };
 
-const typeText = async (text) => {
+const typeText = (text) => {
   displayedText.value = "";
-  for (let i = 0; i < text.length; i++) {
-    await new Promise((resolve) => {
-      typingTimeout.value = setTimeout(resolve, 100);
-    });
+  let i = 0;
+  const typingSpeed = props.writingTime / text.length; // Calculate delay per letter
+
+  typingInterval = setInterval(() => {
     displayedText.value += text[i];
-  }
+    i++;
+    if (i >= text.length) {
+      stopTyping();
+    }
+  }, typingSpeed);
 };
 
 watch(
   () => props.text,
-  async (newText) => {
-    clearTypingTimeout();
-    await nextTick();
+  (newText) => {
+    stopTyping(); // Stop any ongoing typing
     typeText(newText);
   },
   { immediate: true }
 );
 
-onBeforeUnmount(() => {
-  clearTypingTimeout();
-});
+onBeforeUnmount(stopTyping);
 </script>
-
-<style scoped>
-h1 {
-  min-height: var(--min-height, 50px);
-}
-</style>

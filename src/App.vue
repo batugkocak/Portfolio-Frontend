@@ -11,11 +11,13 @@ import RouteHeader from "./components/common/RouteHeader.vue";
   <div class="wrapper">
     <main class="content">
       <RouteHeader />
-      <RouterView class="router-view" v-slot="{ Component }">
-        <Transition name="page-opacity" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </RouterView>
+      <div class="content-router">
+        <RouterView class="router-view" v-slot="{ Component }">
+          <Transition name="page-opacity" mode="out-in">
+            <component :is="Component" />
+          </Transition>
+        </RouterView>
+      </div>
     </main>
     <Footer />
   </div>
@@ -30,11 +32,14 @@ import RouteHeader from "./components/common/RouteHeader.vue";
 
 .content {
   flex: 1;
-  margin-top: 60px;
-  margin: 60px auto 0px auto;
+  margin: 70px auto 0px auto;
   max-width: 70%;
 }
 
+.content-router {
+  max-width: 90%;
+  margin: 0 auto 0 auto;
+}
 .page-opacity-enter-active,
 .page-opacity-leave-active {
   transition: 0.5s ease all;

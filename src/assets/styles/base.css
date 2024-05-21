@@ -13,7 +13,7 @@
     monospace;
 
   --background-color: #181818;
-  --secondary-background-color: #666666;
+  --secondary-background-color: #333333;
   --text-color: #f5f5f5;
   --link-color: #f7df1e;
   --code-color: #bd10e0;
@@ -29,31 +29,15 @@ body {
   color: var(--text-color);
 }
 
-h1 {
+.custom-h1 {
   font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0 4px 0;
 }
-
-h1,
-h2,
-h3 {
-  font-family: var(--title-font-family);
-  font-weight: 700;
-}
-
-h2 {
+.custom-h2 {
   font-size: 20px;
-  padding: 16px 0 4px 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-span,
-li,
-ul {
-  color: var(--text-color);
+  font-weight: bold;
+  margin: 16px 0 4px 0;
 }
 
 a {
@@ -66,13 +50,22 @@ a:hover {
 }
 
 ul {
-  padding-left: 15px;
-  line-height: 30px;
+  padding-left: 1.5rem;
+  line-height: 1.7;
   margin: 0;
 }
 
 p {
-  line-height: 30px;
+  line-height: 1.7;
+  font-size: large;
+  margin: 0;
+  padding: 0;
+}
+p,
+span,
+li,
+ul {
+  color: var(--text-color);
 }
 
 code {

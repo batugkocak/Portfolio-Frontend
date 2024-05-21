@@ -50,8 +50,12 @@ const currentYear = ref(new Date().getFullYear());
   color: grey;
 }
 
-.top-section,
 .bottom-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.top-section {
   display: flex;
   justify-content: center;
   gap: 1rem;
