@@ -10,9 +10,7 @@ import RouteHeader from "./components/common/RouteHeader.vue";
   <Navbar class="navbar" />
   <div class="wrapper">
     <main class="content">
-      <Transition name="page-opacity" mode="out-in">
-        <RouteHeader />
-      </Transition>
+      <RouteHeader />
       <RouterView class="router-view" v-slot="{ Component }">
         <Transition name="page-opacity" mode="out-in">
           <component :is="Component" />
@@ -33,21 +31,8 @@ import RouteHeader from "./components/common/RouteHeader.vue";
 .content {
   flex: 1;
   margin-top: 60px;
-  /*
-  margin-right: auto;
-  margin-left: auto; */
   margin: 60px auto 0px auto;
   max-width: 70%;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 
 .page-opacity-enter-active,
