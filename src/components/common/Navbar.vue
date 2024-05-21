@@ -56,6 +56,7 @@ export default {
   name: "Navbar",
   data() {
     return {
+      windowWidth: window.innerWidth,
       isHidden: false,
       lastScrollPosition: 0,
       threshold: 100,
@@ -64,9 +65,11 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("resize", this.handleResize);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("resize", this.handleResize);
   },
   methods: {
     handleScroll() {
@@ -83,8 +86,18 @@ export default {
       this.lastScrollPosition =
         currentScrollPosition <= 0 ? 0 : currentScrollPosition;
     },
+    handleResize() {
+      this.windowWidth = window.innerWidth;
+    },
     toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
+      if (this.isMobile) {
+        this.isMenuOpen = !this.isMenuOpen;
+      }
+    },
+  },
+  computed: {
+    isMobile() {
+      return this.windowWidth < 768;
     },
   },
 };
@@ -96,7 +109,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: var(--secondary-background-color);
   color: white;
   padding: 0.5rem 0;
   z-index: 1000;
