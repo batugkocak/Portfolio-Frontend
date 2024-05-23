@@ -3,6 +3,7 @@
     v-if="currentText"
     :text="currentText"
     :writingTime="writingTime"
+    textColor="#f7df1e"
   />
 </template>
 

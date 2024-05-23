@@ -3,6 +3,8 @@
     <TypingText
       v-if="currentRouteName"
       :text="currentRouteName.toLocaleUpperCase()"
+      :writingTime="800"
+      :delay="4000"
     />
     <Divider color="#ffff" />
   </div>

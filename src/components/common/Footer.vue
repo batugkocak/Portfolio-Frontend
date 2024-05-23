@@ -27,7 +27,7 @@
       <div>•</div>
       <div>© {{ currentYear }}</div>
       <div>•</div>
-      <div>Build with <a href="https://vuejs.org/">Vue.js</a></div>
+      <div>Built with ♥ and <a href="https://vuejs.org/">Vue.js</a></div>
     </div>
   </footer>
 </template>

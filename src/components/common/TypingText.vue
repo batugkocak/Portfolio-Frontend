@@ -1,5 +1,8 @@
 <template>
-  <p class="custom-h1" :style="{ minHeight: minHeight + 'px' }">
+  <p
+    class="custom-h1"
+    :style="{ minHeight: minHeight + 'px', color: textColor }"
+  >
     {{ displayedText }}
   </p>
 </template>
@@ -19,6 +22,10 @@ const props = defineProps({
   writingTime: {
     type: Number,
     default: 1000, // 1000ms = 1 second, matching original behavior
+  },
+  textColor: {
+    type: String,
+    default: "#f5f5f5", // Default color
   },
 });
 
