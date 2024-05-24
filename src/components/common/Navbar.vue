@@ -110,8 +110,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--secondary-background-color);
-  color: white;
+  background-color: var(--secondary-bg-color);
   padding: 0.5rem 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -175,7 +174,7 @@ nav.hidden {
 }
 
 .nav-link {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease-in-out;

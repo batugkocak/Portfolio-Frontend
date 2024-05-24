@@ -25,7 +25,7 @@ const props = defineProps({
   },
   textColor: {
     type: String,
-    default: "#f5f5f5", // Default color
+    default: "var(--text-color)", // Default color
   },
 });
 
