@@ -27,16 +27,17 @@
     <section class="overview">
       <div class="overview-item">
         <Button>
-          <span class="material-symbols-outlined"> alternate_email </span>
-          Contact Me
+          <span class="material-symbols-outlined"> mail </span>
+          Get in touch
         </Button>
       </div>
       <div class="overview-item">
-        <Button :special="true"
-          ><span class="material-symbols-outlined" style="color: white">
-            assignment </span
-          >Download CV</Button
-        >
+        <Button :special="true">
+          <span class="material-symbols-outlined" style="color: white">
+            assignment
+          </span>
+          Download CV
+        </Button>
       </div>
     </section>
   </div>
