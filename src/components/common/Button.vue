@@ -18,9 +18,9 @@ export default {
 
 <style scoped>
 .custom-button {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #444;
+  background-color: var(--secondary-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--highlight-color);
   padding: 10px 20px;
   font-size: 20px;
   font-weight: bold;
@@ -28,11 +28,14 @@ export default {
   transition: background-color 0.3s, border-color 0.3s;
   border-radius: 8px;
   border: 3px solid white;
+
+  column-gap: 10px;
+  align-items: center;
+  display: flex;
 }
 
 .custom-button:hover {
-  background-color: #555;
-  border-color: #666;
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
 }
 
 .custom-button:focus {
@@ -41,17 +44,24 @@ export default {
 }
 
 .special {
-  background-image: linear-gradient(
+  background: linear-gradient(
     45deg,
     hsl(290deg 87% 47%) 0%,
     hsl(355deg 100% 65%) 18%,
     hsl(53deg 93% 54%) 100%
   );
 
-  animation: gradientAnimation 3s infinite;
+  animation: gradientAnimation 5s infinite;
   background-size: 300% 300%;
   border: 3px solid white;
-  box-shadow: 0 0 4px white;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.5);
+  color: white;
+  font-weight: 900;
+  animation-play-state: running;
+}
+.special:hover {
+  box-shadow: 0 0 3rem rgba(255, 255, 255, 0.5);
+  animation-play-state: paused;
 }
 
 @keyframes gradientAnimation {
