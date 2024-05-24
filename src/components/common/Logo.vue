@@ -1,8 +1,8 @@
 <template>
   <div :class="{ background: background }">
-    <a :href="link" class="centered-link"
-      ><img :src="logo" :height="height" :width="width"
-    /></a>
+    <a :href="link" class="centered-link">
+      <img :src="logo" :height="height" :width="width" />
+    </a>
   </div>
 </template>
 
@@ -12,11 +12,12 @@ defineProps(["logo", "link", "height", "width", "background"]);
 
 <style>
 .background {
-  background-color: var(--secondary-background-color);
+  background-color: var(--text-color);
   width: 35px;
   height: 35px;
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 .centered-link {
   display: flex;
