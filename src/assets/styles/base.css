@@ -12,23 +12,15 @@
   --monospace-font-family: sfmono-regular, consolas, liberation mono, menlo,
     monospace;
 
-  --background-color: #181818;
-  --secondary-background-color: #333333;
+  --primary-color: #f7df1e;
+  --secondary-color: #bd10e0;
+  --accent-color: #f76f1e;
+  --bg-color: #181818;
+  --bg-accent-color: #151515;
   --text-color: #cccccc;
-  --link-color: #f7df1e;
+  --muted-text-color: #999999;
   --secondary-link-color: #323330;
-  --code-color: #bd10e0;
-
-  /*
-  --primary-color:#f7df1e
-  --secondary-color: #1e88f7 
-  --accent-color: #f76f1e
-  --background-color: #181818;
-  --background-accent-color: #333333;
-  --text-color: #cccccc;
-  --muted-text-color: #999999
-
-  */
+  --code-color: #1e88f7;
 
   /*
     Primary Color: Main buttons, headlines, key highlights.
@@ -43,7 +35,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   font-family: var(--main-font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -75,7 +67,7 @@ body {
 /* Links */
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--primary-color);
 }
 
 a:hover {

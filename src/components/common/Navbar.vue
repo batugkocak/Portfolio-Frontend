@@ -2,10 +2,6 @@
   <div>
     <nav :class="{ hidden: isHidden }">
       <div class="logo">
-        <!-- <img
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
-          alt="Logo"
-        /> -->
         <span class="emoji">😎</span>
         <router-link to="/" class="site-name">Batuğ Koçak</router-link>
       </div>
@@ -110,10 +106,10 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--secondary-bg-color);
+  background-color: var(--bg-accent-color);
   padding: 0.5rem 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,6 +141,7 @@ nav.hidden {
 
   animation: gradientAnimation 3s infinite;
   background-size: 300% 300%;
+  color: white;
 }
 
 .logo img {
@@ -155,7 +152,6 @@ nav.hidden {
 .site-name {
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
 }
 
 .menu-divider {
@@ -180,7 +176,7 @@ nav.hidden {
   transition: color 0.3s ease-in-out;
 }
 .nav-item .router-link-active {
-  color: var(--link-color);
+  color: var(--primary-color);
 }
 
 .nav-link:hover {
@@ -237,7 +233,7 @@ nav.hidden {
     margin: 0.5rem 0;
   }
   .nav-item .router-link-active {
-    color: var(--link-color);
+    color: var(--primary-color);
   }
 }
 
