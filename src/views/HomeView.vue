@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <header>
-      <h1>Batuğ Koçak</h1>
+      <p class="custom-h1">Who am I?</p>
+
       <WelcomeText
         :textList="['Fullstack Developer', 'AI Enthusiast', 'Lifetime Learner']"
         :writingTime="1500"
@@ -25,10 +26,17 @@
 
     <section class="overview">
       <div class="overview-item">
-        <Button>Contact Me</Button>
+        <Button>
+          <span class="material-symbols-outlined"> alternate_email </span>
+          Contact Me
+        </Button>
       </div>
       <div class="overview-item">
-        <Button :special="true">CV</Button>
+        <Button :special="true"
+          ><span class="material-symbols-outlined" style="color: white">
+            assignment </span
+          >Download CV</Button
+        >
       </div>
     </section>
   </div>
@@ -45,7 +53,6 @@ import Button from "../components/common/Button.vue";
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fff;
   padding: 20px;
   max-width: 800px;
   margin: auto;
@@ -57,8 +64,7 @@ header {
 
 .profile-photo {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
   margin-top: 20px;
 }
 
@@ -71,17 +77,9 @@ header {
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 40px;
 }
-
 .overview-item {
-  /* background-color: #222; */
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-}
-
-router-link {
-  color: #ffeb3b;
-  text-decoration: none;
-  font-weight: bold;
 }
 </style>

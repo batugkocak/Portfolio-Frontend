@@ -9,16 +9,17 @@
     <div class="top-section">
       <Logo
         link="https://github.com/batugkocak"
-        logo="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+        logo="../../../public/icons/github.svg"
         height="30"
         width="30"
-        background="true"
+        :background="true"
       />
       <Logo
         link="https://x.com/batugkocak"
-        logo="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        logo="../../../public/icons/x.svg"
         height="30"
         width="30"
+        :background="true"
       />
     </div>
 

@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 import Footer from "./components/common/Footer.vue";
 import Navbar from "./components/common/Navbar.vue";
 import RouteHeader from "./components/common/RouteHeader.vue";
