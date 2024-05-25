@@ -18,8 +18,8 @@ export default {
 
 <style scoped>
 .custom-button {
-  background-color: var(--secondary-bg-color);
-  color: var(--text-color);
+  background-color: var(--bg-accent-color);
+  color: var(--highlight-color);
   border: 1px solid var(--highlight-color);
   padding: 10px 20px;
   font-size: 20px;
@@ -46,15 +46,15 @@ export default {
 .special {
   background: linear-gradient(
     45deg,
-    hsl(290deg 87% 47%) 0%,
-    hsl(355deg 100% 65%) 18%,
-    hsl(53deg 93% 54%) 100%
+    var(--secondary-color) 10%,
+    var(--accent-color) 70%,
+    var(--primary-color) 100%
   );
 
   animation: gradientAnimation 5s infinite;
   background-size: 300% 300%;
   border: 3px solid white;
-  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.5);
   color: white;
   font-weight: 900;
   animation-play-state: running;

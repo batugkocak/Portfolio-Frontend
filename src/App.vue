@@ -34,6 +34,7 @@ import RouteHeader from "./components/common/RouteHeader.vue";
   flex: 1;
   margin: 70px auto 0px auto;
   max-width: 70%;
+  min-width: 60%;
 }
 
 .content-router {

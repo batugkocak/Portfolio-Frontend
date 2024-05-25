@@ -16,11 +16,12 @@
   --secondary-color: #bd10e0;
   --accent-color: #f76f1e;
   --bg-color: #181818;
-  --bg-accent-color: #151515;
+  --bg-accent-color: #101010;
   --text-color: #cccccc;
   --muted-text-color: #999999;
   --secondary-link-color: #323330;
   --code-color: #1e88f7;
+  --highlight-color: #ffff;
 
   /*
     Primary Color: Main buttons, headlines, key highlights.
@@ -44,26 +45,37 @@ body {
 
 /* Headings */
 .custom-h1 {
-  font-size: 1.75rem;
+  font-size: 2rem; /* Larger than the max p size */
   font-weight: bold;
-  margin: 1.25rem 0 0.25rem 0;
+  margin: 1.25rem 0 0.5rem 0; /* More spacing below H1 */
 }
 
 .custom-h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.custom-h3 {
   font-size: 1.25rem;
   font-weight: bold;
-  margin: 1rem 0 0.25rem 0;
+  margin: 0.75rem 0 0.5rem 0;
 }
 
 @media (max-width: 767px) {
   .custom-h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   .custom-h2 {
+    font-size: 1.375rem;
+  }
+
+  .custom-h3 {
     font-size: 1.125rem;
   }
 }
+
 /* Links */
 a {
   text-decoration: none;
@@ -84,7 +96,7 @@ ul {
 /* Text */
 p {
   line-height: 1.7;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   transition: font-size 0.3s ease;
@@ -92,13 +104,7 @@ p {
 
 @media (min-width: 768px) {
   p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 767px) {
-  p {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increase for larger screens */
   }
 }
 
