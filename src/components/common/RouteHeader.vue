@@ -5,6 +5,7 @@
       :text="currentRouteName.toLocaleUpperCase()"
       :writingTime="800"
       :delay="4000"
+      class="custom-h1"
     />
     <Divider color="#ffff" />
   </div>

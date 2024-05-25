@@ -4,6 +4,7 @@
     :text="currentText"
     :writingTime="writingTime"
     textColor="#f7df1e"
+    :class="customClass"
   />
 </template>
 
@@ -24,6 +25,7 @@ const props = defineProps({
     type: Number,
     default: 1000,
   },
+  customClass: { type: String, default: null },
 });
 
 const currentTextIndex = ref(0);
